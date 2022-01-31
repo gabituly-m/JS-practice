@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My JS practice</title>
+  </head>
+  <body>
+    <p id="js"></p>
+    <script>
+      document.getElementById("js").innerHTML = "Mukhamedzhan, Group: CS-2122N"
+    </script>
+    <hr>
+    <h3>Current date: </h3>
+    <script>
+const d = new Date();
+document.write("Year: " + d.getFullYear());
+</script>
+<br>
+<script>
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const dy = new Date();
+document.write("Today is: " + days[dy.getDay()]);
+</script>
+<br>
+<script>
+const dz = new Date();
+document.write("Date: " + dz.getDate());
+</script>
+<br>
+<script>
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const ds = new Date();
+document.write("Month: " + months[ds.getDay()]);
+</script>
+<hr>
+<script>const date1 = new Date();
+const date2 = new Date('5/20/2024');
+const diffTime = Math.abs(date2 - date1);
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+console.log(diffTime + " milliseconds");
+console.log(diffDays + " days");
+document.write(diffDays + " days until graduation");
+</script>
+<hr>
+<form>
+1st Number : <input type="text" id="firstNumber" /><br>
+2nd Number: <input type="text" id="secondNumber" /><br>
+<input type="button" onClick="multiplyBy()" Value="Multiply" />
+<input type="button" onClick="divideBy()" Value="Divide" />
+</form>
+<p>The Result is : <br>
+<span id = "result"></span>
+</p>
+
+<script>
+function multiplyBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+}
+
+function divideBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 / num2;
+}
+</script>
+  </body>
+</html>
